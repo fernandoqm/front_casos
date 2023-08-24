@@ -1,19 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import http from '../../http/http-common';
+import React from 'react'
 
-function Home() {
-    const [data, setData] = useState("default");
-
-    useEffect(() => {
-        const token = localStorage.getItem("token");
-
-        if(token)
-        {
-            http.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        }
-
-
-    });
+const Home = () => {
+  return (
+    <div>Inicio</div>
+  )
 }
+
 
 export default Home;
