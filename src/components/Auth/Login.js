@@ -6,17 +6,17 @@ import Home from '../../pages/Admin/Home';
 const Login = () => {
 
     const [usuario, setUsuario] = useState('');
-    const [clave, setClave] = useState('');
+    const [password, setClave] = useState('');
     const [loginSuccessful, setLoginSuccessful] = useState(false);
 
     const handlelogin = (e) => {
         e.preventDefault();
         const data = {
             usuario: usuario,
-            clave: clave
+            password: password
         };
 
-        fetch('http://localhost:43387/api/seguridad/Validar', {
+        fetch('http://localhost:45562/api/seguridad/login', {
             method: 'POST',
             headers: {
                 'Access-Control-Allow-Origin': '*',
