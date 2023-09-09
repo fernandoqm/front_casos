@@ -2,10 +2,12 @@ import { useState } from 'react';
 import Home from '../../pages/Admin/Home';
 import fondo from '../assents/images/fondologin.jpg';
 import {
+import {
     RiFileUserLine,
     RiLockUnlockFill,
     RiEyeFill,
     RiEyeOffLine
+    const [showPassword, setPassword] = useState(false);
   }
     from "react-icons/ri";
 
@@ -25,7 +27,7 @@ const Login = () => {
 
         fetch('http://localhost:45562/api/seguridad/login', {
             method: 'POST',
-            headers: {
+                    sessionStorage.setItem('token', result.token)
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json'
             },
